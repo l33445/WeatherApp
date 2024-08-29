@@ -1,0 +1,66 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+}
+
+android {
+    namespace 'com.example.weatherapp02'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.weatherapp02"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        dataBinding {
+            enabled true
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation files('src/libs/showapi_sdk_java.jar')
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation 'com.android.volley:volley:1.2.1'
+
+    // Room components
+    implementation "androidx.room:room-runtime:2.5.0"
+    annotationProcessor "androidx.room:room-compiler:2.5.0"
+
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0"
+
+    // Material CalendarView
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+
+    // AndroidX Core
+    implementation 'androidx.core:core:1.13.0'
+}

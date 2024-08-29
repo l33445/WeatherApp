@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBlue">#010D38</color>
+    <color name="colorWhite">#E7E8EC</color>
+    <color name="colorOffWhite">#B8BCCA</color>
+    <color name="colorLightBlue">#333D5F</color>
+    <color name="buttonBackgroundBlue">#2196F3</color> <!-- 按钮蓝色背景 -->
+    <color name="buttonBackgroundLightBlue">#03A9F4</color> <!-- 按钮浅蓝色背景 -->
+    <!-- 透明度50%的浅蓝色 -->
+    <color name="colorLightBlueTransparent">#80ADD8E6</color>
+</resources>

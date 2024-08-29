@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.weatherapp02.activities.MyViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteY="731dp">
+
+                <TextView
+                    android:id="@+id/daytextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/day"
+                    android:fontFamily="casual"
+                    android:text="@{String.valueOf(data.getDay()) + `日`}"
+                    android:textColor="@color/colorOffWhite"
+                    android:textSize="20sp"
+                    tools:text="TTTTTTTTTTT" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:id="@+id/cityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="casual"
+                    android:text="@{String.valueOf(data.getCity()) + `  ` + String.valueOf(data.getWeather())}"
+                    android:textColor="@color/colorOffWhite"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:text="沈阳" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="@{`+` + String.valueOf(data.getTemperature()) + `°C`}"
+                        android:textColor="@color/colorOffWhite"
+                        android:textSize="45dp"
+                        android:textStyle="bold"
+                        tools:text="11111" />
+
+                    <ImageView
+                        android:id="@+id/weatherImageView"
+                        android:layout_width="8dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:src="@drawable/icon_clear_night" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="114dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/hourTemperatureTextView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="一小时"
+                            android:textColor="@color/colorOffWhite" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{String.valueOf(data.getTemperatureLiveDataAtIndex(0)) + `°C`}"
+                            android:textColor="@color/colorWhite" />
+
+                        <ImageView
+                            android:id="@+id/dayImageView1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/icon_clear_day" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="二小时"
+                            android:textColor="@color/colorOffWhite" />
+
+                        <TextView
+                            android:id="@+id/hourTemperatureTextView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{String.valueOf(data.getTemperatureLiveDataAtIndex(0)) + `°C`}"
+                            android:textColor="@color/colorWhite" />
+
+                        <ImageView
+                            android:id="@+id/dayImageView2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/icon_clear_day" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="三小时"
+                            android:textColor="@color/colorOffWhite" />
+
+                        <TextView
+                            android:id="@+id/hourTemperatureTextView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{String.valueOf(data.getTemperatureLiveDataAtIndex(2)) + `°C`}"
+                            android:textColor="@color/colorWhite" />
+
+                        <ImageView
+                            android:id="@+id/dayImageView3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/icon_clear_day" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="四小时"
+                            android:textColor="@color/colorOffWhite" />
+
+                        <TextView
+                            android:id="@+id/hourTemperatureTextView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{String.valueOf(data.getTemperatureLiveDataAtIndex(3)) + `°C`}"
+                            android:textColor="@color/colorWhite" />
+
+                        <ImageView
+                            android:id="@+id/dayImageView4"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/icon_clear_day" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="五小时"
+                            android:textColor="@color/colorOffWhite" />
+
+                        <TextView
+                            android:id="@+id/hourTemperatureTextView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@{String.valueOf(data.getTemperatureLiveDataAtIndex(4)) + `°C`}"
+                            android:textColor="@color/colorWhite" />
+
+                        <ImageView
+                            android:id="@+id/dayImageView5"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/icon_clear_day" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="81dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp" >
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp">
+
+                        <ImageButton
+                            android:id="@+id/timeButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_background"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@android:drawable/ic_menu_today" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp">
+
+                        <ImageButton
+                            android:id="@+id/musicButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_background"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@android:drawable/btn_star_big_on" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp">
+
+                        <ImageButton
+                            android:id="@+id/changeColorButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_background"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@android:drawable/ic_menu_gallery" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="402dp"
+                    android:background="@drawable/bottomlayout"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_weather_forecast" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

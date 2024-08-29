@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="4">
+
+    <TextView
+        android:id="@+id/weekTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:textColor="@color/colorOffWhite"
+        tools:text="Wednesday, 16" />
+
+    <ImageView
+        android:id="@+id/weekImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:src="@drawable/icon_partly_cloudy_day" />
+
+    <TextView
+        android:id="@+id/maxTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:textColor="@color/colorWhite"
+        tools:text="25°C" />
+
+    <TextView
+        android:id="@+id/minTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:textColor="@color/colorOffWhite"
+        tools:text="15°C" />
+</LinearLayout>

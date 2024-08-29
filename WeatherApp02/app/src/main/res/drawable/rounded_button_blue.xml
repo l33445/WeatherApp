@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/rounded_button_blue.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/buttonBackgroundBlue" />
+    <corners android:radius="8dp" /> <!-- 圆角调整 -->
+    <padding android:left="10dp" android:top="10dp" android:right="10dp" android:bottom="10dp" /> <!-- 内边距调整 -->
+</shape>

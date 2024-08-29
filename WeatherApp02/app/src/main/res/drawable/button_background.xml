@@ -1,0 +1,17 @@
+<!-- res/drawable/button_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#80010D38"/> <!-- 半透明颜色 (80 表示 50% 透明度) -->
+            <corners android:radius="50dp" />
+            <stroke android:width="1dp" android:color="#00000000"/> <!-- 透明的边框 -->
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="#80333D5F"/> <!-- 半透明颜色 (80 表示 50% 透明度) -->
+            <corners android:radius="50dp" />
+            <stroke android:width="1dp" android:color="#00000000"/> <!-- 透明的边框 -->
+        </shape>
+    </item>
+</selector>

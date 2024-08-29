@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Weather App02</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="day">day</string>
+    <string-array name="city_slots">
+        <item>自动定位</item>
+        <item>北京市</item>
+        <item>沈阳市</item>
+        <item>长春市</item>
+        <item>哈尔滨市</item>
+        <item>天津市</item>
+        <item>呼和浩市</item>
+        <item>银川市</item>
+        <item>太原市</item>
+        <item>石家庄市</item>
+        <item>济南市</item>
+        <item>郑州市</item>
+        <item>西安市</item>
+        <item>武汉市</item>
+        <item>南京市</item>
+        <item>合肥市</item>
+        <item>上海市</item>
+        <item>长沙市</item>
+        <item>南昌市</item>
+        <item>杭州市</item>
+        <item>福州市</item>
+        <item>广州市</item>
+        <item>海口市</item>
+        <item>南宁市</item>
+        <item>重庆市</item>
+        <item>昆明市</item>
+        <item>贵阳市</item>
+        <item>成都市</item>
+        <item>兰州市</item>
+        <item>西宁市</item>
+        <item>拉萨市</item>
+        <item>乌鲁木齐市</item>
+    </string-array>
+</resources>
